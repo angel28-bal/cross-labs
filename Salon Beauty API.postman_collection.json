@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "052cff44-6a69-4e79-93ee-fde18fd52510",
+		"name": "Salon Beauty API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39162326"
+	},
+	"item": [
+		{
+			"name": "Get All Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7280/api/Clients",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzI5NTA3MjQ4LCJleHAiOjE3Mjk1MTA4NDgsImlhdCI6MTcyOTUwNzI0OCwiaXNzIjoiQmVhdXR5U2Fsb25BUEkiLCJhdWQiOiJCZWF1dHlTYWxvbkFQSSJ9._BjFer-M39D1ASZCYfWAGDMVi3yQBKfZeWkqclxJnDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ывываывапывпы\",\r\n  \"experienceLevel\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7280/api/Stylists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Stylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7280/api/Auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
